@@ -13,7 +13,9 @@ namespace Linked_List_DataStructures
         {
             Node node = new Node(data);
             if (this.head == null)
+            {
                 this.head = node;
+            }
             else
             {
                 Node temp = head;
