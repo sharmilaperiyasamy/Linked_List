@@ -92,5 +92,21 @@ namespace Linked_List_DataStructures
                 this.head = this.head.next;
             }
         }
+        public void DeleteLast()
+        {
+            Node temp = this.head;
+            if (temp == null)
+                Console.WriteLine("Linked List is empty.");
+            else if (temp.next == null)
+                this.head = null;
+            else
+            {
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = null;
+            }
+        }
     }
 }

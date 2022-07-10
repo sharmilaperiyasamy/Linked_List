@@ -1,6 +1,6 @@
 ﻿Linked_List_DataStructures.Linked_List list = new Linked_List_DataStructures.Linked_List();
 
-Console.WriteLine("\nLinkedList Operations:\n0.Exit\n1.Adding data to the list\n2.Display the data in the list\n3.Append the data\n4.insert the data\n5.Delete the data at first position\nEnter your choice:");
+Console.WriteLine("\nLinkedList Operations:\n0.Exit\n1.Adding data to the list\n2.Display the data in the list\n3.Append the data\n4.insert the data\n5.Delete the data at first position\n6.Delete the data at last position\nEnter your choice:");
 int option = Convert.ToInt32(Console.ReadLine());
 while (option != 0)
 {
@@ -35,10 +35,13 @@ while (option != 0)
         case 5:
             list.Delete();
             break;
+        case 6:
+            list.DeleteLast();
+            break;
         default:
             Console.WriteLine("Invalid option.");
             break;
     }
-    Console.WriteLine("\nLinkedList Operations:\n0.Exit\n1.Adding data to the list\n2.Display the data in the list\n3.Append the data\n4.insert the data\n5.Delete the data at first position\nEnter your choice:");
+    Console.WriteLine("\nLinkedList Operations:\n0.Exit\n1.Adding data to the list\n2.Display the data in the list\n3.Append the data\n4.insert the data\n5.Delete the data at first position\n6.Delete the data at last position\nEnter your choice:");
     option = Convert.ToInt32(Console.ReadLine());
 }
