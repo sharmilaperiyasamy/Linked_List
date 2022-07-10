@@ -58,7 +58,28 @@ namespace Linked_List_DataStructures
                 temp.next = node;
             }
             Console.WriteLine(data + " is added to the linked list.");
-
+        }
+        //uc4 insert at position
+        public void InsertAtPosition(int position, int data)
+        {
+            Node newNode = new Node(data);
+            if (position < 1)
+                Console.WriteLine("Invalid position.");
+            else if (position == 1)
+            {
+                newNode.next = this.head;
+                head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;
+                for (int i = 1; i < position - 1; i++)
+                {
+                    temp = temp.next;
+                }
+                newNode.next = temp.next;
+                temp.next = newNode;
+            }
         }
     }
 }
